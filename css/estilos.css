@@ -1,0 +1,92 @@
+ol{
+    margin: 0px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+body{
+    margin: 0;
+    padding: 0;
+    
+}
+
+header{
+    margin: auto;
+    width: 1000px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 110px;
+    background-color: #EED6D4;
+}
+
+menu{
+    padding: 0;
+    margin: 0;
+}
+
+.header_ol li{
+    margin: auto 10px;
+    
+}
+
+.header_ol li a{
+    color: white;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 30px;
+}
+ 
+.ondas{
+    height: 300px;
+    width: 100%;
+    background-size:100% 350px ;
+    background-repeat: no-repeat;
+    background-image: url(../imagenes/ondas.png);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.header_image{
+    margin: 0;
+}
+
+.inverted-bar {
+    position: relative;
+    width: 100%;
+    font-size: 50px;
+    }
+
+.inverted-bar:before,
+.inverted-bar:after {
+    margin: auto;
+    padding: 10px 0;
+    text-indent: 60px;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+    content: attr(data-content);
+}
+    
+.inverted-bar:before {
+    background-color: inherit;
+    color: #EED6D4;
+    width: 100%;
+}
+
+.inverted-bar:after {
+    background-color: inherit;
+    color: white;
+    width: 47%;
+}
+
+.container{
+    margin: 0 auto;
+    width: 1000px;
+    display: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+}
