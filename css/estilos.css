@@ -1,92 +1,118 @@
-ol{
-    margin: 0px;
-    padding: 0;
-    list-style: none;
-    display: flex;
+:root{
+    --primari-color:#eed6d4;
+    --secundary-color: #a86e69;
 }
 body{
     margin: 0;
     padding: 0;
-    
+    font-family: 'Roboto', sans-serif;
 }
-
-header{
-    margin: auto;
-    width: 1000px;
+.main{
+    background: linear-gradient(var(--primari-color), #f0f0f0  );
+}
+.header__menu{
     display: flex;
-    justify-content: space-around;
+    height: 100px;
+    justify-content: space-between;
     align-items: center;
-    height: 110px;
-    background-color: #EED6D4;
+    background-color: var(--primari-color);
 }
 
-menu{
+.header__menu img {
+    height: 80%;
+    padding-left: 20px;
+}
+
+.options{
+    display: flex;
+    margin: 0;
     padding: 0;
+}
+
+.options li{
+    margin-right: 30px;
+    list-style: none;
+}
+
+.options li a{
+    text-decoration: none;
+    color:white;
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.options li a:hover{
+    text-decoration: underline;
+    color: black;
+}
+.description{
+    text-align: center;
+    /* margin-top: 20px; */
+    padding-top: 20px;
+}
+.description__content{
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.description__content p{
+    margin-left: 25px;
+    overflow: hidden;
+}
+.description > p{
+    font-size: 50px;
     margin: 0;
 }
-
-.header_ol li{
-    margin: auto 10px;
-    
+.description__content p {
+    font-size: 40px;
+    line-height: 60px;
 }
 
-.header_ol li a{
-    color: white;
-    text-decoration: none;
+.title-works{
+    margin: 50px 0;
+    font-size: 50px;
+    padding-left: 20px;
     text-transform: capitalize;
-    font-style: italic;
-    font-weight: bold;
-    font-size: 30px;
+    text-align: center;
+    /* color: darkolivegreen; */
 }
- 
-.ondas{
-    height: 300px;
+
+.carrusel{
+    height: 400px;
     width: 100%;
-    background-size:100% 350px ;
-    background-repeat: no-repeat;
-    background-image: url(../imagenes/ondas.png);
+    display: flex;
     align-items: center;
     justify-content: center;
-    display: flex;
 }
 
-.header_image{
-    margin: 0;
+.item{
+    border: 1px solid darkolivegreen;
+    border-radius: 20px;
+    height: 300px;
+    width: 250px;
+    margin-right: 20px;
+    transform-origin: center left;
+    transition: 450ms;
+    padding: 10px 10px;
 }
 
-.inverted-bar {
-    position: relative;
-    width: 100%;
-    font-size: 50px;
-    }
-
-.inverted-bar:before,
-.inverted-bar:after {
-    margin: auto;
-    padding: 10px 0;
-    text-indent: 60px;
-    position: absolute;
-    white-space: nowrap;
-    overflow: hidden;
-    content: attr(data-content);
-}
-    
-.inverted-bar:before {
-    background-color: inherit;
-    color: #EED6D4;
+.item img{
+    height: 100%;
     width: 100%;
 }
 
-.inverted-bar:after {
-    background-color: inherit;
-    color: white;
-    width: 47%;
+.item:hover ~ .item{
+    transform: translate3d(120px, 0, 0);
 }
 
-.container{
-    margin: 0 auto;
-    width: 1000px;
-    display: inherit;
-    justify-content: inherit;
-    align-items: inherit;
+.carrusel:hover .item{
+    opacity: 0.5;
 }
+.carrusel:hover .item:hover{
+    opacity: 1;
+    transform: scale(1.3);
+}
+
